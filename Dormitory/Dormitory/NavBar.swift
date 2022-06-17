@@ -9,9 +9,31 @@ import SwiftUI
 
 struct NavBar: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        
+        TabView {
+            Home()
+                .tabItem(){
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+            PhoneBook()
+                .tabItem(){
+                    Image(systemName: "phone.fill")
+                    Text("Contacts")
+                }
+            MovingOnUp()
+                .tabItem(){
+                    Image(systemName: "shippingbox.fill")
+                    Text("Moving Out")
+                }
+            More()
+                .tabItem(){
+                    Image(systemName: "ellipsis")
+                    Text("More")
+                }
+        }
+        //.frame(height: 200)
+    }}
 
 struct NavBar_Previews: PreviewProvider {
     static var previews: some View {

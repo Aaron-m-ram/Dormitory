@@ -14,6 +14,11 @@
 		679323C0285D1A2800D18353 /* DormitoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323BF285D1A2800D18353 /* DormitoryTests.swift */; };
 		679323CA285D1A2900D18353 /* DormitoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323C9285D1A2900D18353 /* DormitoryUITests.swift */; };
 		679323CC285D1A2900D18353 /* DormitoryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323CB285D1A2900D18353 /* DormitoryUITestsLaunchTests.swift */; };
+		679323D9285D1A6800D18353 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323D8285D1A6800D18353 /* NavBar.swift */; };
+		679323DC285D1AC500D18353 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DB285D1AC500D18353 /* Home.swift */; };
+		679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DD285D1B0F00D18353 /* PhoneBook.swift */; };
+		679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DF285D1B4300D18353 /* MovingOnUp.swift */; };
+		679323E2285D1B8F00D18353 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323E1285D1B8F00D18353 /* More.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		679323C5285D1A2900D18353 /* DormitoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DormitoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		679323C9285D1A2900D18353 /* DormitoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormitoryUITests.swift; sourceTree = "<group>"; };
 		679323CB285D1A2900D18353 /* DormitoryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormitoryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		679323D8285D1A6800D18353 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		679323DB285D1AC500D18353 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		679323DD285D1B0F00D18353 /* PhoneBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBook.swift; sourceTree = "<group>"; };
+		679323DF285D1B4300D18353 /* MovingOnUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingOnUp.swift; sourceTree = "<group>"; };
+		679323E1285D1B8F00D18353 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				679323AE285D1A2600D18353 /* DormitoryApp.swift */,
+				679323D8285D1A6800D18353 /* NavBar.swift */,
+				679323DA285D1AB100D18353 /* Nav */,
 				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323B2285D1A2800D18353 /* Assets.xcassets */,
 				679323B4285D1A2800D18353 /* Preview Content */,
@@ -125,6 +137,17 @@
 				679323CB285D1A2900D18353 /* DormitoryUITestsLaunchTests.swift */,
 			);
 			path = DormitoryUITests;
+			sourceTree = "<group>";
+		};
+		679323DA285D1AB100D18353 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				679323DB285D1AC500D18353 /* Home.swift */,
+				679323DD285D1B0F00D18353 /* PhoneBook.swift */,
+				679323DF285D1B4300D18353 /* MovingOnUp.swift */,
+				679323E1285D1B8F00D18353 /* More.swift */,
+			);
+			path = Nav;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +282,11 @@
 			files = (
 				679323B1285D1A2600D18353 /* ContentView.swift in Sources */,
 				679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */,
+				679323DC285D1AC500D18353 /* Home.swift in Sources */,
+				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
+				679323E2285D1B8F00D18353 /* More.swift in Sources */,
+				679323D9285D1A6800D18353 /* NavBar.swift in Sources */,
+				679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

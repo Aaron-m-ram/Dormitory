@@ -9,7 +9,20 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Image(systemName: "wrench.and.screwdriver")
+                .resizable()
+                .frame(width: 75, height: 75)
+                .padding()
+            Text("Maintenance")
+                .font(.title)
+            Text("report a leaky faucet, broken locks, etc.")
+                .font(.subheadline)
+                .padding(.bottom)
+            
+        }
+        .frame(width: 350, height: 250)
+        .border(.pink, width: 5)
     }
 }
 
