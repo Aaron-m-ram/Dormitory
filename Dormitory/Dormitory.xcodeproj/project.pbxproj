@@ -19,6 +19,7 @@
 		679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DD285D1B0F00D18353 /* PhoneBook.swift */; };
 		679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DF285D1B4300D18353 /* MovingOnUp.swift */; };
 		679323E2285D1B8F00D18353 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323E1285D1B8F00D18353 /* More.swift */; };
+		67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C850285D1F1E00833DAF /* "DataBase".swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		679323DD285D1B0F00D18353 /* PhoneBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBook.swift; sourceTree = "<group>"; };
 		679323DF285D1B4300D18353 /* MovingOnUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingOnUp.swift; sourceTree = "<group>"; };
 		679323E1285D1B8F00D18353 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		67E0C850285D1F1E00833DAF /* "DataBase".swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "\"DataBase\".swift"; path = "Nav/\"DataBase\".swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		679323AD285D1A2600D18353 /* Dormitory */ = {
 			isa = PBXGroup;
 			children = (
+				67E0C850285D1F1E00833DAF /* "DataBase".swift */,
 				679323AE285D1A2600D18353 /* DormitoryApp.swift */,
 				679323D8285D1A6800D18353 /* NavBar.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
@@ -284,6 +287,7 @@
 				679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */,
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
+				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,
 				679323D9285D1A6800D18353 /* NavBar.swift in Sources */,
 				679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */,

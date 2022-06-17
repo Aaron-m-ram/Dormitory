@@ -16,6 +16,7 @@ struct NavBar: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
+            
             PhoneBook()
                 .tabItem(){
                     Image(systemName: "phone.fill")
