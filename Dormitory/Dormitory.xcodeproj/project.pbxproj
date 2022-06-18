@@ -20,6 +20,9 @@
 		679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DF285D1B4300D18353 /* MovingOnUp.swift */; };
 		679323E2285D1B8F00D18353 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323E1285D1B8F00D18353 /* More.swift */; };
 		67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C850285D1F1E00833DAF /* "DataBase".swift */; };
+		67E0C854285D574A00833DAF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C853285D574A00833DAF /* Services.swift */; };
+		67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C855285D6D3D00833DAF /* NavyDorms.swift */; };
+		67E0C858285D726800833DAF /* Emer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C857285D726800833DAF /* Emer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		679323DF285D1B4300D18353 /* MovingOnUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingOnUp.swift; sourceTree = "<group>"; };
 		679323E1285D1B8F00D18353 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
 		67E0C850285D1F1E00833DAF /* "DataBase".swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "\"DataBase\".swift"; path = "Nav/\"DataBase\".swift"; sourceTree = "<group>"; };
+		67E0C853285D574A00833DAF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		67E0C855285D6D3D00833DAF /* NavyDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyDorms.swift; sourceTree = "<group>"; };
+		67E0C857285D726800833DAF /* Emer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 				679323AE285D1A2600D18353 /* DormitoryApp.swift */,
 				679323D8285D1A6800D18353 /* NavBar.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
+				67E0C852285D571E00833DAF /* mainxPath */,
 				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323B2285D1A2800D18353 /* Assets.xcassets */,
 				679323B4285D1A2800D18353 /* Preview Content */,
@@ -151,6 +158,16 @@
 				679323E1285D1B8F00D18353 /* More.swift */,
 			);
 			path = Nav;
+			sourceTree = "<group>";
+		};
+		67E0C852285D571E00833DAF /* mainxPath */ = {
+			isa = PBXGroup;
+			children = (
+				67E0C853285D574A00833DAF /* Services.swift */,
+				67E0C855285D6D3D00833DAF /* NavyDorms.swift */,
+				67E0C857285D726800833DAF /* Emer.swift */,
+			);
+			path = mainxPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +303,12 @@
 				679323B1285D1A2600D18353 /* ContentView.swift in Sources */,
 				679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */,
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
+				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
 				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,
+				67E0C854285D574A00833DAF /* Services.swift in Sources */,
+				67E0C858285D726800833DAF /* Emer.swift in Sources */,
 				679323D9285D1A6800D18353 /* NavBar.swift in Sources */,
 				679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */,
 			);
@@ -449,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dormitory/Preview Content\"";
+				DEVELOPMENT_TEAM = ZL7P8P79UA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -477,6 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dormitory/Preview Content\"";
+				DEVELOPMENT_TEAM = ZL7P8P79UA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
