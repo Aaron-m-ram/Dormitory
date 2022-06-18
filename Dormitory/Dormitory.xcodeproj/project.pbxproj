@@ -23,6 +23,7 @@
 		67E0C854285D574A00833DAF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C853285D574A00833DAF /* Services.swift */; };
 		67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C855285D6D3D00833DAF /* NavyDorms.swift */; };
 		67E0C858285D726800833DAF /* Emer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C857285D726800833DAF /* Emer.swift */; };
+		67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C859285D7BE100833DAF /* AirForceDorms.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		67E0C853285D574A00833DAF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		67E0C855285D6D3D00833DAF /* NavyDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyDorms.swift; sourceTree = "<group>"; };
 		67E0C857285D726800833DAF /* Emer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emer.swift; sourceTree = "<group>"; };
+		67E0C859285D7BE100833DAF /* AirForceDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirForceDorms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				67E0C853285D574A00833DAF /* Services.swift */,
+				67E0C859285D7BE100833DAF /* AirForceDorms.swift */,
 				67E0C855285D6D3D00833DAF /* NavyDorms.swift */,
 				67E0C857285D726800833DAF /* Emer.swift */,
 			);
@@ -306,6 +309,7 @@
 				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
 				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
+				67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */,
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,
 				67E0C854285D574A00833DAF /* Services.swift in Sources */,
 				67E0C858285D726800833DAF /* Emer.swift in Sources */,
