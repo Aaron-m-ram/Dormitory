@@ -23,20 +23,23 @@ struct NavyDorms: View {
     
     var body: some View {
         ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach((0...5), id: \.self) { index in
-                         
-                        Text(bldgArr[index])
-                            .frame(width: 75, height: 75)
-                            .padding()
-                            .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke())
-                            .padding(.init(25))
-                    
+            LazyVGrid(columns: columns) {
+                ForEach((0...5), id: \.self) { index in
+                    NavigationLink(destination:GenMainx()){
+                    Text(bldgArr[index])
+                        .frame(width: 75, height: 75)
+                        .padding()
+                    //}
+                        .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                        .stroke())
                     }
+                        .padding(.init(25))
+                
                 }
+            }
         }
+        .navigationBarTitle("Which building?", displayMode: .inline)
         .padding(.top, 50.0)
     }
 }

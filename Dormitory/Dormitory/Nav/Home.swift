@@ -54,7 +54,7 @@ struct Home: View {
                             .frame(width: 75, height: 75)
                         Text("Emergency")
                             .font(.title)
-                        Text("maintenance emergency or need to talk to management")
+                        Text("maintenance emergency/contact management")
                             .font(.subheadline)
                     }
                     .frame(width: 350, height: 150)

@@ -24,6 +24,8 @@
 		67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C855285D6D3D00833DAF /* NavyDorms.swift */; };
 		67E0C858285D726800833DAF /* Emer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C857285D726800833DAF /* Emer.swift */; };
 		67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C859285D7BE100833DAF /* AirForceDorms.swift */; };
+		67E0C85C285DB20000833DAF /* GenMainx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85B285DB20000833DAF /* GenMainx.swift */; };
+		67E0C85E285DBA2B00833DAF /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85D285DBA2B00833DAF /* Issues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		67E0C855285D6D3D00833DAF /* NavyDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyDorms.swift; sourceTree = "<group>"; };
 		67E0C857285D726800833DAF /* Emer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emer.swift; sourceTree = "<group>"; };
 		67E0C859285D7BE100833DAF /* AirForceDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirForceDorms.swift; sourceTree = "<group>"; };
+		67E0C85B285DB20000833DAF /* GenMainx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenMainx.swift; sourceTree = "<group>"; };
+		67E0C85D285DBA2B00833DAF /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,8 @@
 				67E0C853285D574A00833DAF /* Services.swift */,
 				67E0C859285D7BE100833DAF /* AirForceDorms.swift */,
 				67E0C855285D6D3D00833DAF /* NavyDorms.swift */,
+				67E0C85B285DB20000833DAF /* GenMainx.swift */,
+				67E0C85D285DBA2B00833DAF /* Issues.swift */,
 				67E0C857285D726800833DAF /* Emer.swift */,
 			);
 			path = mainxPath;
@@ -306,10 +312,12 @@
 				679323B1285D1A2600D18353 /* ContentView.swift in Sources */,
 				679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */,
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
+				67E0C85E285DBA2B00833DAF /* Issues.swift in Sources */,
 				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
 				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
 				67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */,
+				67E0C85C285DB20000833DAF /* GenMainx.swift in Sources */,
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,
 				67E0C854285D574A00833DAF /* Services.swift in Sources */,
 				67E0C858285D726800833DAF /* Emer.swift in Sources */,
