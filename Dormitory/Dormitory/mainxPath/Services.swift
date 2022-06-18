@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Services: View {
     var body: some View {
-        NavigationView{
             VStack(spacing: 30){
                 NavigationLink(destination: NavyDorms()){
                     VStack{
@@ -40,41 +39,8 @@ struct Services: View {
                     
                 }
             }
-            .navigationTitle("Who owns the dorm?")
-        }
-//        VStack{
-//            Text("Which service owns the dorm...")
-//                .font(.title)
-//                .bold()
-//                .frame(width: 375.0, alignment: .topLeading)
-//
-//            VStack{
-//                Image(systemName: "ferry")
-//                    .resizable()
-//                    .frame(width: 75, height: 75)
-//                    //.padding()
-//                Text("Navy")
-//                    .font(.title)
-//            }
-//            .frame(width: 350, height: 150)
-//            .overlay(
-//                RoundedRectangle(cornerRadius: 5))
-//            .padding(.bottom)
-//
-//            VStack{
-//                Image(systemName: "airplane.departure")
-//                        .resizable()
-//                        .frame(width: 75, height: 75)
-//                        //.padding()
-//                    Text("Air Force")
-//                        .font(.title)
-//                }
-//                .frame(width: 350, height: 150)
-//                .overlay(
-//                    RoundedRectangle(cornerRadius: 5)
-//                        .stroke(.black))
-//                .padding(.bottom)
-//        }
+            .navigationBarTitle("Who owns the dorm?", displayMode: .inline)
+            //.navigationBarBackButtonHidden(true)
     }
 }
 

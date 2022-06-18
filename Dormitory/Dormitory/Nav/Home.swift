@@ -64,6 +64,7 @@ struct Home: View {
                 }
             }
             .navigationTitle("Dormitory")
+            .navigationBarBackButtonHidden(true)
     }
 }
 }
