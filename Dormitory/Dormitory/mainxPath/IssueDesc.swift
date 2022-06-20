@@ -10,16 +10,30 @@ import MessageUI
 
 struct IssueDesc: View {
     
-    @State private var issue: String = ""
-    
+    //@State private var issue: String = ""
+    @EnvironmentObject var mainxInfo: MainxInfo
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
+    
+    enum FocusField: Hashable {
+      case field
+    }
+    @FocusState private var focusedField: FocusField?
     
     var body: some View {
         VStack() {
 
-            TextField("Describe the issues you are having", text: $issue)
+            TextEditor(text: $mainxInfo.description)
                 .font(.title2)
+                .focused($focusedField, equals: .field)
+                //.frame(width: UIScreen.main.bounds.size.width - 5)
+                //.textFieldStyle(.roundedBorder)
+                //.fixedSize(horizontal: true, vertical: false)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                        self.focusedField = .field
+                    }
+                }
             Spacer()
             Button(action: {
                 self.isShowingMailView.toggle()
@@ -39,7 +53,8 @@ struct IssueDesc: View {
             .stroke())
             .padding()
         }
-        .navigationBarTitle("Issue Description", displayMode: .inline)
+        .environmentObject(mainxInfo)
+        .navigationBarTitle("Describe The Issue", displayMode: .inline)
 
 
     }
@@ -48,5 +63,6 @@ struct IssueDesc: View {
 struct IssueDesc_Previews: PreviewProvider {
     static var previews: some View {
         IssueDesc()
+            .environmentObject(MainxInfo())
     }
 }

@@ -29,6 +29,7 @@
 		67E0C860285E568600833DAF /* IssueDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85F285E568600833DAF /* IssueDesc.swift */; };
 		67E0C862285E665500833DAF /* testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C861285E665500833DAF /* testview.swift */; };
 		67E0C864285E6C3F00833DAF /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C863285E6C3F00833DAF /* MailHelper.swift */; };
+		67E0C86728603AC500833DAF /* MainxInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C86628603AC400833DAF /* MainxInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		67E0C85F285E568600833DAF /* IssueDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDesc.swift; sourceTree = "<group>"; };
 		67E0C861285E665500833DAF /* testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testview.swift; sourceTree = "<group>"; };
 		67E0C863285E6C3F00833DAF /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
+		67E0C86628603AC400833DAF /* MainxInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainxInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				67E0C863285E6C3F00833DAF /* MailHelper.swift */,
+				67E0C86628603AC400833DAF /* MainxInfo.swift */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
 				67E0C85E285DBA2B00833DAF /* RoomNumber.swift in Sources */,
 				67E0C862285E665500833DAF /* testview.swift in Sources */,
+				67E0C86728603AC500833DAF /* MainxInfo.swift in Sources */,
 				67E0C864285E6C3F00833DAF /* MailHelper.swift in Sources */,
 				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
 				67E0C860285E568600833DAF /* IssueDesc.swift in Sources */,

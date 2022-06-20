@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DormitoryApp: App {
+    @StateObject var mainxInfo = MainxInfo()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(mainxInfo)
         }
     }
 }

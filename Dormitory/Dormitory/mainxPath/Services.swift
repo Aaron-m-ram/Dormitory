@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct Services: View {
+    
+//    class MainxInfo: ObservableObject {
+//        @Published var roomNumIssue = ""
+//        @Published var description = ""
+//    }
+    
+    //@EnvironmentObject var roomNumIssue: String
+    //@Published var roomNumIssue: String
+    
+    
+    
+    
     var body: some View {
             VStack(spacing: 30){
                 NavigationLink(destination: NavyDorms()){

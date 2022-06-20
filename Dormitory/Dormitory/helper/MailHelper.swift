@@ -10,6 +10,8 @@ import UIKit
 import MessageUI
 
 struct MailView: UIViewControllerRepresentable {
+    
+    @EnvironmentObject var mainxInfo: MainxInfo
 
     @Environment(\.presentationMode) var presentation
     @Binding var result: Result<MFMailComposeResult, Error>?
@@ -49,8 +51,11 @@ struct MailView: UIViewControllerRepresentable {
         vc.mailComposeDelegate = context.coordinator
         vc.setToRecipients(["CES@CES.CES"])
         vc.setSubject("Work Order")
+        vc.setMessageBody("hello myv room is \(mainxInfo.room) and the issues I am having are: \(mainxInfo.description) ", isHTML: true)
+        
         return vc
     }
+        //.EnvironmentObject(MainxInfo())
 
     func updateUIViewController(_ uiViewController: MFMailComposeViewController,
                                 context: UIViewControllerRepresentableContext<MailView>) {

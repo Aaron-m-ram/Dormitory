@@ -9,17 +9,33 @@ import SwiftUI
 
 struct RoomNumber: View {
    
-    @State private var roomNum: String = ""
+    //@State private var roomNum: String = ""
+    //@State public var roomNum: Services.MainxInfo
+    //@State private var roomNum: String = xInfo.room
+    @EnvironmentObject var mainxInfo: MainxInfo
+    let placeholderString = "Enter a room number"
+    //@FocusState var isFocused: Bool
+    
+    enum FocusField: Hashable {
+      case field
+    }
+    @FocusState private var focusedField: FocusField?
     
     var body: some View {
         VStack() {
             //Text("Enter a Room Number")
             //    .font(.title)
-            TextField("Enter your room number", text: $roomNum)
+            TextEditor(text: $mainxInfo.room)
                 .font(.title2)
-                //.focused($keyboardFocused)
-
-            //Text("Room Number: \(roomNum)")
+                .focused($focusedField, equals: .field)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                        self.focusedField = .field
+                    }
+                }
+                //.frame(width: UIScreen.main.bounds.size.width - 5)
+                //.textFieldStyle(.roundedBorder)
+                //.fixedSize(horizontal: true, vertical: false)
             Spacer()
             NavigationLink(destination: IssueDesc()){
                 Text("Next")
@@ -33,7 +49,8 @@ struct RoomNumber: View {
             .stroke())
             .padding()
         }
-        .navigationBarTitle("Room Number", displayMode: .inline)
+        .environmentObject(mainxInfo)
+        .navigationBarTitle("Give The Room Number", displayMode: .inline)
 
 
     }
@@ -42,5 +59,6 @@ struct RoomNumber: View {
 struct RoomNumber_Previews: PreviewProvider {
     static var previews: some View {
         RoomNumber()
+            .environmentObject(MainxInfo())
     }
 }
