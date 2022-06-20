@@ -26,7 +26,7 @@ struct GenMainx: View {
         ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach((0...3), id: \.self) { index in
-                        NavigationLink(destination: Issues()){
+                        NavigationLink(destination: RoomNumber()){
                         VStack{
                         Image(systemName: imageArr[index])
                                 .resizable()

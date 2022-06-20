@@ -25,7 +25,10 @@
 		67E0C858285D726800833DAF /* Emer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C857285D726800833DAF /* Emer.swift */; };
 		67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C859285D7BE100833DAF /* AirForceDorms.swift */; };
 		67E0C85C285DB20000833DAF /* GenMainx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85B285DB20000833DAF /* GenMainx.swift */; };
-		67E0C85E285DBA2B00833DAF /* Issues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85D285DBA2B00833DAF /* Issues.swift */; };
+		67E0C85E285DBA2B00833DAF /* RoomNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85D285DBA2B00833DAF /* RoomNumber.swift */; };
+		67E0C860285E568600833DAF /* IssueDesc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C85F285E568600833DAF /* IssueDesc.swift */; };
+		67E0C862285E665500833DAF /* testview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C861285E665500833DAF /* testview.swift */; };
+		67E0C864285E6C3F00833DAF /* MailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C863285E6C3F00833DAF /* MailHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +70,10 @@
 		67E0C857285D726800833DAF /* Emer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emer.swift; sourceTree = "<group>"; };
 		67E0C859285D7BE100833DAF /* AirForceDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirForceDorms.swift; sourceTree = "<group>"; };
 		67E0C85B285DB20000833DAF /* GenMainx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenMainx.swift; sourceTree = "<group>"; };
-		67E0C85D285DBA2B00833DAF /* Issues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issues.swift; sourceTree = "<group>"; };
+		67E0C85D285DBA2B00833DAF /* RoomNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNumber.swift; sourceTree = "<group>"; };
+		67E0C85F285E568600833DAF /* IssueDesc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueDesc.swift; sourceTree = "<group>"; };
+		67E0C861285E665500833DAF /* testview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testview.swift; sourceTree = "<group>"; };
+		67E0C863285E6C3F00833DAF /* MailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 				679323D8285D1A6800D18353 /* NavBar.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
 				67E0C852285D571E00833DAF /* mainxPath */,
+				67E0C865285E6C4600833DAF /* helper */,
 				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323B2285D1A2800D18353 /* Assets.xcassets */,
 				679323B4285D1A2800D18353 /* Preview Content */,
@@ -173,10 +180,20 @@
 				67E0C859285D7BE100833DAF /* AirForceDorms.swift */,
 				67E0C855285D6D3D00833DAF /* NavyDorms.swift */,
 				67E0C85B285DB20000833DAF /* GenMainx.swift */,
-				67E0C85D285DBA2B00833DAF /* Issues.swift */,
+				67E0C85D285DBA2B00833DAF /* RoomNumber.swift */,
+				67E0C85F285E568600833DAF /* IssueDesc.swift */,
+				67E0C861285E665500833DAF /* testview.swift */,
 				67E0C857285D726800833DAF /* Emer.swift */,
 			);
 			path = mainxPath;
+			sourceTree = "<group>";
+		};
+		67E0C865285E6C4600833DAF /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				67E0C863285E6C3F00833DAF /* MailHelper.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,8 +329,11 @@
 				679323B1285D1A2600D18353 /* ContentView.swift in Sources */,
 				679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */,
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
-				67E0C85E285DBA2B00833DAF /* Issues.swift in Sources */,
+				67E0C85E285DBA2B00833DAF /* RoomNumber.swift in Sources */,
+				67E0C862285E665500833DAF /* testview.swift in Sources */,
+				67E0C864285E6C3F00833DAF /* MailHelper.swift in Sources */,
 				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
+				67E0C860285E568600833DAF /* IssueDesc.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
 				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
 				67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */,
