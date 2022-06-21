@@ -20,6 +20,11 @@ struct IssueDesc: View {
     }
     @FocusState private var focusedField: FocusField?
     
+    //Testing code//
+    @State var complete = true
+    //Testing code//
+    
+    
     var body: some View {
         VStack() {
 
@@ -33,6 +38,8 @@ struct IssueDesc: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
                         self.focusedField = .field
                     }
+                    let _ = print("we made it print")
+
                 }
             Spacer()
             Button(action: {
@@ -46,19 +53,34 @@ struct IssueDesc: View {
             .disabled(!MFMailComposeViewController.canSendMail())
             .sheet(isPresented: $isShowingMailView){
                 MailView(result: self.$result)
+                let _ = print("result is: :)))))))))))")
+                let _ = print("\(MailView(result: self.$result).complete)")
+//                defer{
+//                    mainxInfo.description = "we changed it"
+//                }
+                
             }
-
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
             .stroke())
             .padding()
+//            if(complete == true){
+//                mainxInfo.description = "we changed it in IssueDesc"
+//            }
+            
         }
+        
+
         .environmentObject(mainxInfo)
         .navigationBarTitle("Describe The Issue", displayMode: .inline)
+        
+
 
 
     }
 }
+
+
 
 struct IssueDesc_Previews: PreviewProvider {
     static var previews: some View {

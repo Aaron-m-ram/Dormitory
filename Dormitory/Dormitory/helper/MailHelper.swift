@@ -15,43 +15,93 @@ struct MailView: UIViewControllerRepresentable {
 
     @Environment(\.presentationMode) var presentation
     @Binding var result: Result<MFMailComposeResult, Error>?
+    @State var complete = false;
+    //@State var mainViewActive = false
 
     class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
 
         @Binding var presentation: PresentationMode
         @Binding var result: Result<MFMailComposeResult, Error>?
+        @Binding var complete: Bool
+        //var mainxInfo: MainxInfo
+        //@State var mainViewActive = false
 
         init(presentation: Binding<PresentationMode>,
-             result: Binding<Result<MFMailComposeResult, Error>?>) {
+             result: Binding<Result<MFMailComposeResult, Error>?>,
+             complete: Binding<Bool>/*,
+             mainxInfo: <MainxInfo>*/) {
             _presentation = presentation
             _result = result
+            _complete = complete
+            //_mainxInfo = mainxInfo
         }
 
         func mailComposeController(_ controller: MFMailComposeViewController,
                                    didFinishWith result: MFMailComposeResult,
                                    error: Error?) {
+           
+            
             defer {
                 $presentation.wrappedValue.dismiss()
+                print("does it work here too?")
+                
             }
             guard error == nil else {
                 self.result = .failure(error!)
                 return
             }
-            self.result = .success(result)
+            
+            switch result.rawValue {
+            case MFMailComposeResult.cancelled.rawValue:
+                print("Mail cancelled")
+            case MFMailComposeResult.saved.rawValue:
+                print("Mail saved")
+            case MFMailComposeResult.sent.rawValue:
+                print("Mail sent")
+                print("complete before:\(complete) ")
+                complete = true
+                print("complete after: \(complete)")
+                if(complete == true){
+                    //mainxInfo.description = "We changed it!!!!"
+                }
+
+                //return //mainxInfo.description = "We changed it!!!!!"
+            case MFMailComposeResult.failed.rawValue:
+                print("Mail sent failure: %@", [error!.localizedDescription])
+            default:
+                break
+            }
+            //controller.dismissViewControllerAnimated(true, completion: nil)
+            
+
+            
+            //NavigationLink(destination: Home(), isActive: $mainViewActive)
+            //let _ = print("made it successful result: \(self.result)")
         }
+        
     }
 
     func makeCoordinator() -> Coordinator {
         return Coordinator(presentation: presentation,
-                           result: $result)
+                           result: $result, complete: $complete/*, mainxInfo: mainxInfo*/)
+
     }
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
+        defer{
+            mainxInfo.description = ""
+            mainxInfo.room = ""
+            print("mainxInfo: \(mainxInfo)")
+            NavigationLink(destination: Home()){
+                EmptyView()
+            }
+        }
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator
-        vc.setToRecipients(["CES@CES.CES"])
+        //vc.setToRecipients(["CES@CES.CES"])
+        vc.setToRecipients(["iupamxhfdyindxcnzw@kvhrr.com"])
         vc.setSubject("Work Order")
-        vc.setMessageBody("hello myv room is \(mainxInfo.room) and the issues I am having are: \(mainxInfo.description) ", isHTML: true)
+        vc.setMessageBody("<h1> WorK Order </h1>hello myv room is \(mainxInfo.room) and the issues I am having are: \(mainxInfo.description) ", isHTML: true)
         
         return vc
     }
@@ -59,6 +109,6 @@ struct MailView: UIViewControllerRepresentable {
 
     func updateUIViewController(_ uiViewController: MFMailComposeViewController,
                                 context: UIViewControllerRepresentableContext<MailView>) {
-
+        //print("updateUIViewController is in da houzzzezeeee")
     }
 }
