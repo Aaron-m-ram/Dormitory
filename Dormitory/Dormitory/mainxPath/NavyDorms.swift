@@ -13,6 +13,8 @@ struct NavyDorms: View {
                    GridItem(.fixed(150))]
     
     private let bldgArr =  ["N1", "N2", "N3", "N4", "N5", "N6"]
+    
+    @Binding var takeMeHome2: Bool
      
     @ViewBuilder
 //    func SquareView() -> some View {
@@ -25,7 +27,7 @@ struct NavyDorms: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach((0...5), id: \.self) { index in
-                    NavigationLink(destination:GenMainx()){
+                    NavigationLink(destination: GenMainx(takeMeHome3: self.$takeMeHome2)){
                     Text(bldgArr[index])
                         .frame(width: 75, height: 75)
                         .padding()
@@ -34,6 +36,7 @@ struct NavyDorms: View {
                     RoundedRectangle(cornerRadius: 5)
                         .stroke())
                     }
+                    .isDetailLink(false)
                         .padding(.init(25))
                 
                 }
@@ -46,6 +49,10 @@ struct NavyDorms: View {
 
 struct NavyDorms_Previews: PreviewProvider {
     static var previews: some View {
-        NavyDorms()
+        //NavyDorms()
+        Group {
+            NavyDorms(takeMeHome2: .constant(true))
+            NavyDorms(takeMeHome2: .constant(false))
+         }
     }
 }

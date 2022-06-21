@@ -16,13 +16,14 @@ struct Services: View {
     
     //@EnvironmentObject var roomNumIssue: String
     //@Published var roomNumIssue: String
+    @Binding var takeMeHome: Bool
     
     
     
     
     var body: some View {
             VStack(spacing: 30){
-                NavigationLink(destination: NavyDorms()){
+                NavigationLink(destination: NavyDorms(takeMeHome2: self.$takeMeHome)){
                     VStack{
                         Image(systemName: "ferry")
                             .resizable()
@@ -35,8 +36,9 @@ struct Services: View {
                         RoundedRectangle(cornerRadius: 5)
                         .stroke())
                 }
+                .isDetailLink(false)
                 
-                NavigationLink(destination: AirForceDorms()){
+                NavigationLink(destination: AirForceDorms(takeMeHome2: self.$takeMeHome)){
                     VStack{
                         Image(systemName: "airplane.departure")
                             .resizable()
@@ -50,6 +52,7 @@ struct Services: View {
                         .stroke())
                     
                 }
+                .isDetailLink(false)
             }
             .navigationBarTitle("Who owns the dorm?", displayMode: .inline)
             //.navigationBarBackButtonHidden(true)
@@ -58,6 +61,10 @@ struct Services: View {
 
 struct services_Previews: PreviewProvider {
     static var previews: some View {
-        Services()
+        //Services()
+        Group {
+            AirForceDorms(takeMeHome2: .constant(true))
+            AirForceDorms(takeMeHome2: .constant(false))
+         }
     }
 }

@@ -14,6 +14,7 @@ struct RoomNumber: View {
     //@State private var roomNum: String = xInfo.room
     @EnvironmentObject var mainxInfo: MainxInfo
     let placeholderString = "Enter a room number"
+    @Binding var takeMeHome4: Bool
     //@FocusState var isFocused: Bool
     
     enum FocusField: Hashable {
@@ -37,12 +38,13 @@ struct RoomNumber: View {
                 //.textFieldStyle(.roundedBorder)
                 //.fixedSize(horizontal: true, vertical: false)
             Spacer()
-            NavigationLink(destination: IssueDesc()){
+            NavigationLink(destination: IssueDesc(takeMeHome5: self.$takeMeHome4)){
                 Text("Next")
                     .font(.title)
                     .frame(width: UIScreen.main.bounds.size.width-10, height: 50)
                     //.padding(bottom)
             }
+            .isDetailLink(false)
 
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
@@ -58,7 +60,11 @@ struct RoomNumber: View {
 
 struct RoomNumber_Previews: PreviewProvider {
     static var previews: some View {
-        RoomNumber()
+        //RoomNumber()
+        Group {
+            RoomNumber(takeMeHome4: .constant(true))
+            RoomNumber(takeMeHome4: .constant(false))
+         }
             .environmentObject(MainxInfo())
     }
 }

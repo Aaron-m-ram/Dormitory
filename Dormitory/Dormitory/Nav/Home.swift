@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct Home: View {
+    @State var originalHome: Bool = false
     var body: some View {
         NavigationView {
             VStack(spacing: 30) {
 
-                NavigationLink(destination: Services()) {
+                NavigationLink(destination: Services(takeMeHome: self.$originalHome), isActive: self.$originalHome ) {
                     //Text("Choose Heads")
                     VStack{
                         Image(systemName: "wrench.and.screwdriver")
@@ -30,7 +31,7 @@ struct Home: View {
                     
                 }
 
-                NavigationLink(destination: Services()) {
+                NavigationLink(destination: Services(takeMeHome: self.$originalHome), isActive: self.$originalHome) {
                     //Text("Choose Tails")
                     VStack{
                         Image(systemName: "hand.wave")

@@ -14,6 +14,7 @@ struct IssueDesc: View {
     @EnvironmentObject var mainxInfo: MainxInfo
     @State var result: Result<MFMailComposeResult, Error>? = nil
     @State var isShowingMailView = false
+    @Binding var takeMeHome5: Bool
     
     enum FocusField: Hashable {
       case field
@@ -22,10 +23,13 @@ struct IssueDesc: View {
     
     //Testing code//
     @State var complete = true
+    
+    
     //Testing code//
     
     
     var body: some View {
+        //if(complete == true){
         VStack() {
 
             TextEditor(text: $mainxInfo.description)
@@ -44,6 +48,7 @@ struct IssueDesc: View {
             Spacer()
             Button(action: {
                 self.isShowingMailView.toggle()
+                self.takeMeHome5 = false
             }){
                 Text("Submit")
                     .font(.title)
@@ -53,27 +58,33 @@ struct IssueDesc: View {
             .disabled(!MFMailComposeViewController.canSendMail())
             .sheet(isPresented: $isShowingMailView){
                 MailView(result: self.$result)
+                //complete = true
                 let _ = print("result is: :)))))))))))")
                 let _ = print("\(MailView(result: self.$result).complete)")
-//                defer{
-//                    mainxInfo.description = "we changed it"
-//                }
+
                 
             }
             .overlay(
                 RoundedRectangle(cornerRadius: 5)
             .stroke())
             .padding()
-//            if(complete == true){
-//                mainxInfo.description = "we changed it in IssueDesc"
-//            }
-            
         }
+
         
 
         .environmentObject(mainxInfo)
         .navigationBarTitle("Describe The Issue", displayMode: .inline)
-        
+        //}
+        //else{
+        //HStack(){
+            //if(complete == false){
+//                NavigationLink(destination: Home(), isActive: $complete){
+//                    Home()
+                //}
+                //.isDetailLink(false)
+            //}
+        //}
+        //}
 
 
 
@@ -84,7 +95,12 @@ struct IssueDesc: View {
 
 struct IssueDesc_Previews: PreviewProvider {
     static var previews: some View {
-        IssueDesc()
+        
+        //IssueDesc(takeMeHome5: value)
+        Group {
+            IssueDesc(takeMeHome5: .constant(true))
+            IssueDesc(takeMeHome5: .constant(false))
+         }
             .environmentObject(MainxInfo())
     }
 }

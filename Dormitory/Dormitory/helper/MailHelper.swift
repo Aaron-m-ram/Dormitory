@@ -86,15 +86,20 @@ struct MailView: UIViewControllerRepresentable {
                            result: $result, complete: $complete/*, mainxInfo: mainxInfo*/)
 
     }
+//    func navView() -> some View{
+//        @State var isShowingView = true
+//        return NavigationLink(destination: Home(), isActive: $isShowingView){
+//            Home()
+//        }
+//    }
 
     func makeUIViewController(context: UIViewControllerRepresentableContext<MailView>) -> MFMailComposeViewController {
         defer{
+            //navView()
             mainxInfo.description = ""
             mainxInfo.room = ""
             print("mainxInfo: \(mainxInfo)")
-            NavigationLink(destination: Home()){
-                EmptyView()
-            }
+            //navView()
         }
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator

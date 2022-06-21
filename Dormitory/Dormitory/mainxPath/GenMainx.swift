@@ -14,6 +14,8 @@ struct GenMainx: View {
     
     private let bldgArr =  ["General", "Electrical", "Key and lock", "Plumbing"]
     private let imageArr = ["hammer", "powerplug", "key", "drop"]
+    
+    @Binding var takeMeHome3: Bool
      
     @ViewBuilder
 //    func SquareView() -> some View {
@@ -26,7 +28,7 @@ struct GenMainx: View {
         ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach((0...3), id: \.self) { index in
-                        NavigationLink(destination: RoomNumber()){
+                        NavigationLink(destination: RoomNumber(takeMeHome4: self.$takeMeHome3)){
                         VStack{
                         Image(systemName: imageArr[index])
                                 .resizable()
@@ -40,6 +42,7 @@ struct GenMainx: View {
                                 RoundedRectangle(cornerRadius: 5)
                             .stroke())
                         }
+                            .isDetailLink(false)
                             .padding(.init(25))
                     
                     }
@@ -52,6 +55,10 @@ struct GenMainx: View {
 
 struct GenMainx_Previews: PreviewProvider {
     static var previews: some View {
-        GenMainx()
+        //GenMainx()
+        Group {
+            GenMainx(takeMeHome3: .constant(true))
+            GenMainx(takeMeHome3: .constant(false))
+         }
     }
 }
