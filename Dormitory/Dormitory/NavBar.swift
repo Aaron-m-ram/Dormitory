@@ -28,11 +28,25 @@ struct NavBar: View {
                     Image(systemName: "house")
                     Text("Home")
                 }.tag(0)
+            
             self.tab2()
                 .tabItem(){
                     Image(systemName: "phone.fill")
                     Text("Contacts")
                 }.tag(1)
+            
+            self.tab3()
+                .tabItem(){
+                    Image(systemName: "shippingbox.fill")
+                    Text("Moving Out")
+                }
+            
+            self.tab4()
+                .tabItem(){
+                    Image(systemName: "ellipsis")
+                    Text("More")
+                }
+            
         }
         
     }
@@ -95,22 +109,34 @@ struct NavBar: View {
         .id(self.resetNavigationID)
     }
     
-//    private func tab1() -> some View {
-//        //@State var originalHome: Bool = false
-//
-//        NavigationView{
-//            NavigationLink(destination: Home()){
-//                Text ("Tab 1 - Initial for home")
-//            }
-//        }
-//    }
     
     private func tab2() -> some View {
         NavigationView{
-            NavigationLink(destination: Crisis()) {
-                Text ("Tab 2 - Initial for Crisis")
+            VStack(spacing: 30){
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("Crisis")
+                            .font(.title)
+                        Text("If you need help for any situation")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
             }
         }.id(self.resetNavigationID)
+    }
+    
+    private func tab3() -> some View {
+        Text("Hello from moving :)")
+            .id(self.resetNavigationID)
+    }
+    
+    private func tab4() -> some View {
+        Text("Hello from More :D")
+            .id(self.resetNavigationID)
     }
 }
 
