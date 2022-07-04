@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		674E6F222872A652007381C7 /* Crisis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E6F212872A652007381C7 /* Crisis.swift */; };
+		674E6F242872A712007381C7 /* CrisisContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E6F232872A712007381C7 /* CrisisContact.swift */; };
 		679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323AE285D1A2600D18353 /* DormitoryApp.swift */; };
 		679323B1285D1A2600D18353 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323B0285D1A2600D18353 /* ContentView.swift */; };
 		679323B3285D1A2800D18353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679323B2285D1A2800D18353 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		674E6F212872A652007381C7 /* Crisis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crisis.swift; sourceTree = "<group>"; };
+		674E6F232872A712007381C7 /* CrisisContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrisisContact.swift; sourceTree = "<group>"; };
 		679323AB285D1A2600D18353 /* Dormitory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormitory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679323AE285D1A2600D18353 /* DormitoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormitoryApp.swift; sourceTree = "<group>"; };
 		679323B0285D1A2600D18353 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		674E6F202872A601007381C7 /* ContactPath */ = {
+			isa = PBXGroup;
+			children = (
+				674E6F212872A652007381C7 /* Crisis.swift */,
+				674E6F232872A712007381C7 /* CrisisContact.swift */,
+			);
+			path = ContactPath;
+			sourceTree = "<group>";
+		};
 		679323A2285D1A2500D18353 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 				679323D8285D1A6800D18353 /* NavBar.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
 				67E0C852285D571E00833DAF /* mainxPath */,
+				674E6F202872A601007381C7 /* ContactPath */,
 				67E0C865285E6C4600833DAF /* helper */,
 				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323B2285D1A2800D18353 /* Assets.xcassets */,
@@ -334,6 +348,7 @@
 				679323DC285D1AC500D18353 /* Home.swift in Sources */,
 				67E0C85E285DBA2B00833DAF /* RoomNumber.swift in Sources */,
 				67E0C862285E665500833DAF /* testview.swift in Sources */,
+				674E6F222872A652007381C7 /* Crisis.swift in Sources */,
 				67E0C86728603AC500833DAF /* MainxInfo.swift in Sources */,
 				67E0C864285E6C3F00833DAF /* MailHelper.swift in Sources */,
 				67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */,
@@ -347,6 +362,7 @@
 				67E0C858285D726800833DAF /* Emer.swift in Sources */,
 				679323D9285D1A6800D18353 /* NavBar.swift in Sources */,
 				679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */,
+				674E6F242872A712007381C7 /* CrisisContact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

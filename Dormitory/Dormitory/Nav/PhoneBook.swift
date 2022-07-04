@@ -9,8 +9,28 @@ import SwiftUI
 
 struct PhoneBook: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .background(.green)
+        NavigationView {
+            VStack(spacing: 30) {
+
+                NavigationLink(destination: Crisis()) {
+                    //Text("Choose Heads")
+                    VStack{
+                        //Image(systemName: "wrench.and.screwdriver")
+                          //  .resizable()
+                          //  .frame(width: 75, height: 75)
+                        Text("Crisis")
+                            .font(.title)
+                        Text("If you need help for any situation")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                    
+                }
+            }
+        }
     }
 }
 

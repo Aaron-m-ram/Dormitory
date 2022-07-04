@@ -8,33 +8,143 @@
 import SwiftUI
 
 struct NavBar: View {
-    var body: some View {
+   @State var originalHome: Bool = false
+    
+    @State private var selection = 0
+    @State private var resetNavigationID = UUID()
+    
+    var body: some View{
         
-        TabView {
-            Home()
+        let selectable = Binding(
+            get: { self.selection },
+            set: { self.selection = $0
+                self.resetNavigationID = UUID()
+                self.originalHome = false
+            })
+        
+        return TabView(selection: selectable) {
+            self.tab1()
                 .tabItem(){
                     Image(systemName: "house")
                     Text("Home")
-                }
-            
-            PhoneBook()
+                }.tag(0)
+            self.tab2()
                 .tabItem(){
                     Image(systemName: "phone.fill")
                     Text("Contacts")
-                }
-            MovingOnUp()
-                .tabItem(){
-                    Image(systemName: "shippingbox.fill")
-                    Text("Moving Out")
-                }
-            More()
-                .tabItem(){
-                    Image(systemName: "ellipsis")
-                    Text("More")
-                }
+                }.tag(1)
         }
-        //.frame(height: 200)
-    }}
+        
+    }
+    
+    private func tab1() -> some View {
+        NavigationView{
+            VStack(spacing: 30){
+                NavigationLink(destination: Services(takeMeHome: self.$originalHome), isActive: self.$originalHome) {
+                    VStack{
+                        Image(systemName: "wrench.and.screwdriver")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                        Text("maintenance")
+                            .font(.title)
+                        Text("report a leaky faucet, broken locks, etc...")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+                
+                NavigationLink(destination: Services(takeMeHome: self.$originalHome), isActive: self.$originalHome) {
+                    VStack{
+                        Image(systemName: "hand.wave")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                        Text("Help")
+                            .font(.title)
+                        Text("Locked out or need helped after hours")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+                
+                NavigationLink(destination: Emer()){
+                    VStack{
+                        Image(systemName: "exclamationmark.3")
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                        Text("Emergency")
+                            .font(.title)
+                        Text("maintenance emergence/contact management")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+                    
+            }
+            .navigationTitle("Dormitory")
+            .navigationBarBackButtonHidden(true)
+        }
+        .id(self.resetNavigationID)
+    }
+    
+//    private func tab1() -> some View {
+//        //@State var originalHome: Bool = false
+//
+//        NavigationView{
+//            NavigationLink(destination: Home()){
+//                Text ("Tab 1 - Initial for home")
+//            }
+//        }
+//    }
+    
+    private func tab2() -> some View {
+        NavigationView{
+            NavigationLink(destination: Crisis()) {
+                Text ("Tab 2 - Initial for Crisis")
+            }
+        }.id(self.resetNavigationID)
+    }
+}
+
+
+//struct NavBar: View {
+//    var body: some View {
+//
+//        TabView {
+//            Home()
+//                .tabItem(){
+//                    Image(systemName: "house")
+//                    Text("Home")
+//                }
+//
+//            PhoneBook()
+//                .tabItem(){
+//                    Image(systemName: "phone.fill")
+//                    Text("Contacts")
+//                }
+//            MovingOnUp()
+//                .tabItem(){
+//                    Image(systemName: "shippingbox.fill")
+//                    Text("Moving Out")
+//                }
+//            More()
+//                .tabItem(){
+//                    Image(systemName: "ellipsis")
+//                    Text("More")
+//                }
+//        }
+//        //.frame(height: 200)
+//    }
+//
+//}
 
 struct NavBar_Previews: PreviewProvider {
     static var previews: some View {
