@@ -116,6 +116,13 @@
 			path = ContactPath;
 			sourceTree = "<group>";
 		};
+		674E6F252872CEDE007381C7 /* HelpPath */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HelpPath;
+			sourceTree = "<group>";
+		};
 		679323A2285D1A2500D18353 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +202,7 @@
 				67E0C853285D574A00833DAF /* Services.swift */,
 				67E0C859285D7BE100833DAF /* AirForceDorms.swift */,
 				67E0C855285D6D3D00833DAF /* NavyDorms.swift */,
+				674E6F252872CEDE007381C7 /* HelpPath */,
 				67E0C85B285DB20000833DAF /* GenMainx.swift */,
 				67E0C85D285DBA2B00833DAF /* RoomNumber.swift */,
 				67E0C85F285E568600833DAF /* IssueDesc.swift */,

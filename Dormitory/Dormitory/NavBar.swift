@@ -39,13 +39,13 @@ struct NavBar: View {
                 .tabItem(){
                     Image(systemName: "shippingbox.fill")
                     Text("Moving Out")
-                }
+                }.tag(2)
             
             self.tab4()
                 .tabItem(){
                     Image(systemName: "ellipsis")
                     Text("More")
-                }
+                }.tag(3)
             
         }
         
@@ -112,10 +112,38 @@ struct NavBar: View {
     
     private func tab2() -> some View {
         NavigationView{
+            
             VStack(spacing: 30){
                 NavigationLink(destination: Crisis()){
                     VStack{
-                        Text("Crisis")
+                        Text("SHIRT/Umbudsmen")
+                            .font(.title)
+                        Text("If you need to contact your SHIRT/Umbudsmen")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+            
+            
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("Dorm Management")
+                            .font(.title)
+                        Text("If you need help for any situation")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+            
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("Resources")
                             .font(.title)
                         Text("If you need help for any situation")
                             .font(.subheadline)
@@ -130,13 +158,64 @@ struct NavBar: View {
     }
     
     private func tab3() -> some View {
-        Text("Hello from moving :)")
-            .id(self.resetNavigationID)
+        NavigationView{
+            VStack(spacing: 30){
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("Off Base Housing")
+                            .font(.title)
+                        Text("If you want to enjoy all that Hawaii has to give")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+            
+            
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("On Base Housing")
+                            .font(.title)
+                        Text("If you want the comfort of living on the base's amazing communities")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+            
+                NavigationLink(destination: Crisis()){
+                    VStack{
+                        Text("BAH Calculator")
+                            .font(.title)
+                        Text("Get to know how much money you will get to live in Hawaii")
+                            .font(.subheadline)
+                    }
+                    .frame(width: 350, height: 150)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke())
+                }
+            }
+        }.id(self.resetNavigationID)
     }
     
     private func tab4() -> some View {
-        Text("Hello from More :D")
-            .id(self.resetNavigationID)
+        NavigationView{
+            List {
+                Text("Facebook")
+                Text("Instagram")
+                Text("Great Life Hawaii")
+               
+            }
+            .navigationTitle("More")
+                //.navigationTitle("Landmarks")
+
+        }//.id(self.resetNavigationID)
+        //.navigationTitle("More")
     }
 }
 
