@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		674E6F222872A652007381C7 /* Crisis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E6F212872A652007381C7 /* Crisis.swift */; };
 		674E6F242872A712007381C7 /* CrisisContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E6F232872A712007381C7 /* CrisisContact.swift */; };
+		674E6F27287551A1007381C7 /* HelpPOC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674E6F262875519F007381C7 /* HelpPOC.swift */; };
 		679323AF285D1A2600D18353 /* DormitoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323AE285D1A2600D18353 /* DormitoryApp.swift */; };
 		679323B1285D1A2600D18353 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323B0285D1A2600D18353 /* ContentView.swift */; };
 		679323B3285D1A2800D18353 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679323B2285D1A2800D18353 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		674E6F212872A652007381C7 /* Crisis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crisis.swift; sourceTree = "<group>"; };
 		674E6F232872A712007381C7 /* CrisisContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrisisContact.swift; sourceTree = "<group>"; };
+		674E6F262875519F007381C7 /* HelpPOC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPOC.swift; sourceTree = "<group>"; };
 		679323AB285D1A2600D18353 /* Dormitory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dormitory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		679323AE285D1A2600D18353 /* DormitoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DormitoryApp.swift; sourceTree = "<group>"; };
 		679323B0285D1A2600D18353 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		674E6F252872CEDE007381C7 /* HelpPath */ = {
 			isa = PBXGroup;
 			children = (
+				674E6F262875519F007381C7 /* HelpPOC.swift */,
 			);
 			path = HelpPath;
 			sourceTree = "<group>";
@@ -148,12 +151,12 @@
 			children = (
 				67E0C850285D1F1E00833DAF /* "DataBase".swift */,
 				679323AE285D1A2600D18353 /* DormitoryApp.swift */,
+				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323D8285D1A6800D18353 /* NavBar.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
 				67E0C852285D571E00833DAF /* mainxPath */,
 				674E6F202872A601007381C7 /* ContactPath */,
 				67E0C865285E6C4600833DAF /* helper */,
-				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323B2285D1A2800D18353 /* Assets.xcassets */,
 				679323B4285D1A2800D18353 /* Preview Content */,
 			);
@@ -368,6 +371,7 @@
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,
 				67E0C854285D574A00833DAF /* Services.swift in Sources */,
 				67E0C858285D726800833DAF /* Emer.swift in Sources */,
+				674E6F27287551A1007381C7 /* HelpPOC.swift in Sources */,
 				679323D9285D1A6800D18353 /* NavBar.swift in Sources */,
 				679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */,
 				674E6F242872A712007381C7 /* CrisisContact.swift in Sources */,
