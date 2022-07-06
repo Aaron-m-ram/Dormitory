@@ -17,18 +17,23 @@ struct NavyDorms: View {
     @Binding var takeMeHome2: Bool
     @EnvironmentObject var mainxInfo: MainxInfo
      
+    
     @ViewBuilder
-//    func SquareView() -> some View {
-//        .overlay(
-//            RoundedRectangle(cornerRadius: 5)
-//            .stroke())
-//    }
+    var destinationView: some View {
+        if mainxInfo.choices == 0 {
+            GenMainx(takeMeHome3: self.$takeMeHome2)
+        } else {
+            HelpPOC()
+        }
+    }
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach((0...5), id: \.self) { index in
-                    NavigationLink(destination: GenMainx(takeMeHome3: self.$takeMeHome2)
+
+                    
+                    NavigationLink(destination: destinationView
                         .onAppear{
                         let _ = print("you are in the navy dorm")
                         mainxInfo.dormName = bldgArr[index]
