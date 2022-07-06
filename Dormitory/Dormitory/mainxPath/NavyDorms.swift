@@ -15,6 +15,7 @@ struct NavyDorms: View {
     private let bldgArr =  ["N1", "N2", "N3", "N4", "N5", "N6"]
     
     @Binding var takeMeHome2: Bool
+    @EnvironmentObject var mainxInfo: MainxInfo
      
     @ViewBuilder
 //    func SquareView() -> some View {
@@ -27,7 +28,14 @@ struct NavyDorms: View {
         ScrollView {
             LazyVGrid(columns: columns) {
                 ForEach((0...5), id: \.self) { index in
-                    NavigationLink(destination: GenMainx(takeMeHome3: self.$takeMeHome2)){
+                    NavigationLink(destination: GenMainx(takeMeHome3: self.$takeMeHome2)
+                        .onAppear{
+                        let _ = print("you are in the navy dorm")
+                        mainxInfo.dormName = bldgArr[index]
+                        mainxInfo.dormIndex = index
+                            let _ = print("your choice is: \(mainxInfo.choices)")
+                        
+                    }){
                     Text(bldgArr[index])
                         .frame(width: 75, height: 75)
                         .padding()

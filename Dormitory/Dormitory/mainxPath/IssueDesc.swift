@@ -43,6 +43,7 @@ struct IssueDesc: View {
                         self.focusedField = .field
                     }
                     let _ = print("we made it print")
+                    //let _ =
 
                 }
             Spacer()

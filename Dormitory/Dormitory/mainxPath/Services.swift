@@ -17,13 +17,19 @@ struct Services: View {
     //@EnvironmentObject var roomNumIssue: String
     //@Published var roomNumIssue: String
     @Binding var takeMeHome: Bool
+    @EnvironmentObject var mainxInfo: MainxInfo
     
     
     
     
     var body: some View {
             VStack(spacing: 30){
-                NavigationLink(destination: NavyDorms(takeMeHome2: self.$takeMeHome)){
+                NavigationLink(destination: NavyDorms(takeMeHome2: self.$takeMeHome)
+                    .onAppear{
+                    let _ = print("you are in the navy service")
+                    let _ = print("your choice number is: \(mainxInfo.choices)")
+                    mainxInfo.service = "navy"
+                }){
                     VStack{
                         Image(systemName: "ferry")
                             .resizable()
@@ -38,7 +44,12 @@ struct Services: View {
                 }
                 .isDetailLink(false)
                 
-                NavigationLink(destination: AirForceDorms(takeMeHome2: self.$takeMeHome)){
+                NavigationLink(destination: AirForceDorms(takeMeHome2: self.$takeMeHome)
+                    .onAppear{
+                    let _ = print("you are in the Air Force service")
+                    mainxInfo.service = "Air Force"
+                    let _ = print("your choice number is: \(mainxInfo.choices)")
+                }){
                     VStack{
                         Image(systemName: "airplane.departure")
                             .resizable()
@@ -55,6 +66,7 @@ struct Services: View {
                 .isDetailLink(false)
             }
             .navigationBarTitle("Who owns the dorm?", displayMode: .inline)
+            .environmentObject(mainxInfo)
             //.navigationBarBackButtonHidden(true)
     }
 }
@@ -65,6 +77,6 @@ struct services_Previews: PreviewProvider {
         Group {
             AirForceDorms(takeMeHome2: .constant(true))
             AirForceDorms(takeMeHome2: .constant(false))
-         }
+        }.environmentObject(MainxInfo())
     }
 }

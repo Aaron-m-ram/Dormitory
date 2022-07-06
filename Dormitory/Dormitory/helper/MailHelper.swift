@@ -106,7 +106,7 @@ struct MailView: UIViewControllerRepresentable {
         //vc.setToRecipients(["CES@CES.CES"])
         vc.setToRecipients(["iupamxhfdyindxcnzw@kvhrr.com"])
         vc.setSubject("Work Order")
-        vc.setMessageBody("<h1> WorK Order </h1>hello myv room is \(mainxInfo.room) and the issues I am having are: \(mainxInfo.description) ", isHTML: true)
+        vc.setMessageBody("<h1> WorK Order </h1>hello my room is \(mainxInfo.room) and the issues I am having are: \(mainxInfo.description) the service you are in is: \(mainxInfo.service), the general problem is: \(mainxInfo.genProblem), The dorm I am in is: \(mainxInfo.dormName)", isHTML: true)
         
         return vc
     }

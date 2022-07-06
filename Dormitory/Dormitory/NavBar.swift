@@ -13,6 +13,9 @@ struct NavBar: View {
     @State private var selection = 0
     @State private var resetNavigationID = UUID()
     
+    @EnvironmentObject var mainxInfo: MainxInfo
+    //@StateObject var mainxInfo = MainxInfo()
+    
     var body: some View{
         
         let selectable = Binding(
@@ -20,6 +23,14 @@ struct NavBar: View {
             set: { self.selection = $0
                 self.resetNavigationID = UUID()
                 self.originalHome = false
+                
+                mainxInfo.service = ""
+                mainxInfo.dormName = ""
+                mainxInfo.genProblem = ""
+                mainxInfo.room = ""
+                mainxInfo.description = ""
+                mainxInfo.dormIndex = 0
+                mainxInfo.choices = 0
             })
         
         return TabView(selection: selectable) {
@@ -28,6 +39,7 @@ struct NavBar: View {
                     Image(systemName: "house")
                     Text("Home")
                 }.tag(0)
+                //.environmentObject(mainxInfo)
             
             self.tab2()
                 .tabItem(){
@@ -64,13 +76,21 @@ struct NavBar: View {
                         Text("report a leaky faucet, broken locks, etc...")
                             .font(.subheadline)
                     }
+                    
                     .frame(width: 350, height: 150)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .stroke())
                 }
+                .isDetailLink(false)
                 
-                NavigationLink(destination: Services(takeMeHome: self.$originalHome), isActive: self.$originalHome) {
+                NavigationLink(destination: Services(takeMeHome: self.$originalHome)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                            mainxInfo.choices = 2
+                        }
+                    })
+                /*isActive: self.$originalHome)*/{
                     VStack{
                         Image(systemName: "hand.wave")
                             .resizable()
@@ -80,11 +100,13 @@ struct NavBar: View {
                         Text("Locked out or need helped after hours")
                             .font(.subheadline)
                     }
+                    
                     .frame(width: 350, height: 150)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .stroke())
                 }
+                .isDetailLink(false)
                 
                 NavigationLink(destination: Emer()){
                     VStack{
@@ -101,12 +123,14 @@ struct NavBar: View {
                         RoundedRectangle(cornerRadius: 5)
                             .stroke())
                 }
+                //.isDetailLink(false)
                     
             }
             .navigationTitle("Dormitory")
             .navigationBarBackButtonHidden(true)
         }
         .id(self.resetNavigationID)
+        .environmentObject(mainxInfo)
     }
     
     
@@ -254,5 +278,6 @@ struct NavBar: View {
 struct NavBar_Previews: PreviewProvider {
     static var previews: some View {
         NavBar()
+            .environmentObject(MainxInfo())
     }
 }

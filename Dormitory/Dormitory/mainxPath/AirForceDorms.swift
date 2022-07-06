@@ -15,8 +15,9 @@ struct AirForceDorms: View {
     private let bldgArr =  ["AF1", "AF2", "AF3", "AF4", "AF5", "AF6"]
     
     @Binding var takeMeHome2: Bool
+    @EnvironmentObject var mainxInfo: MainxInfo
      
-    @ViewBuilder
+    //@ViewBuilder
 //    func SquareView() -> some View {
 //        .overlay(
 //            RoundedRectangle(cornerRadius: 5)
@@ -27,7 +28,12 @@ struct AirForceDorms: View {
         ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach((0...5), id: \.self) { index in
-                        NavigationLink(destination:GenMainx(takeMeHome3: self.$takeMeHome2 )){
+                        NavigationLink(destination:GenMainx(takeMeHome3: self.$takeMeHome2 )
+                            .onAppear{
+                            let _ = print("you are in the AF Dorm")
+                            mainxInfo.dormName = bldgArr[index]
+                            mainxInfo.dormIndex = index
+                        }){
                         Text(bldgArr[index])
                             .frame(width: 75, height: 75)
                             .padding()
@@ -40,10 +46,12 @@ struct AirForceDorms: View {
                             .padding(.init(25))
                     
                     }
+                    
                 }
         }
         .navigationBarTitle("Which building?", displayMode: .inline)
         .padding(.top, 50.0)
+        .environmentObject(mainxInfo)
     }
 }
 
@@ -54,5 +62,6 @@ struct AirForceDorms_Previews: PreviewProvider {
             AirForceDorms(takeMeHome2: .constant(true))
             AirForceDorms(takeMeHome2: .constant(false))
          }
+        .environmentObject(MainxInfo())
     }
 }
