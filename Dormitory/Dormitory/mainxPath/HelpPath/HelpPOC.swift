@@ -12,13 +12,13 @@ struct HelpPOC: View {
     @EnvironmentObject var mainxInfo: MainxInfo
     
     private let managerArr = ["123-123-123", "123-123-123", "123-123-123", "123-123-123", "123-123-123", "123-123-123"]
-    private let eMainxArr = ["456-456-456", "456-456-456", "456-456-456", "456-456-456", "456-456-456", "456-456-456"]
+    private let MainxArr = ["456-456-456", "456-456-456", "456-456-456", "456-456-456", "456-456-456", "456-456-456"]
     private let dormLead = ["789-789-789", "789-789-789", "789-789-789", "789-789-789", "789-789-789", "789-789-789"]
     
     var body: some View {
         List {
             Text("Manager: \n \(managerArr[mainxInfo.dormIndex])")
-            Text("Emergency Maintenance: \n \(eMainxArr[mainxInfo.dormIndex])")
+            Text("Maintenance: \n \(MainxArr[mainxInfo.dormIndex])")
             Text("Dorm Lead: \n \(dormLead[mainxInfo.dormIndex])")
            
         }
