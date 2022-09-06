@@ -54,18 +54,14 @@ struct MailView: UIViewControllerRepresentable {
             switch result.rawValue {
             case MFMailComposeResult.cancelled.rawValue:
                 print("Mail cancelled")
+                controller.dismiss(animated: true)
             case MFMailComposeResult.saved.rawValue:
                 print("Mail saved")
+                controller.dismiss(animated: true)
             case MFMailComposeResult.sent.rawValue:
                 print("Mail sent")
+                controller.dismiss(animated: true)
                 print("complete before:\(complete) ")
-                complete = true
-                print("complete after: \(complete)")
-                if(complete == true){
-                    //mainxInfo.description = "We changed it!!!!"
-                }
-
-                //return //mainxInfo.description = "We changed it!!!!!"
             case MFMailComposeResult.failed.rawValue:
                 print("Mail sent failure: %@", [error!.localizedDescription])
             default:
