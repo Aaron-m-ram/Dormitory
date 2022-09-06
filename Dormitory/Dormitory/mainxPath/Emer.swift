@@ -19,7 +19,7 @@ struct Emer: View {
             //Link("BDOC", destination: URL(string: "tel: 808-474-6754")!)
             //Link("911", destination: URL(string: "tel: 911")!)
         }
-        .navigationTitle("Emergency POC")
+        .navigationBarTitle("Emergency POC", displayMode: .inline)
         .environmentObject(mainxInfo)
     }
 }

@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct Crisis: View {
-    let columns = [GridItem(.fixed(150)),
-                   GridItem(.fixed(150))]
+    //let columns = [GridItem(.fixed(150)),
+    //               GridItem(.fixed(150))]
     
-    private let bldgArr =  ["SAPR", "Suicide Prevention", "AADD", "Chaplain"]
+    //private let bldgArr =  ["SAPR", "Suicide Prevention", "AADD", "Chaplain"]
    // private let imageArr = ["hammer", "powerplug", "key", "drop"]
     
     //@Binding var takeMeHome3: Bool
      
-    @ViewBuilder
+    //@ViewBuilder
 //    func SquareView() -> some View {
 //        .overlay(
 //            RoundedRectangle(cornerRadius: 5)
@@ -24,31 +24,37 @@ struct Crisis: View {
 //    }
     
     var body: some View {
-        ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach((0...3), id: \.self) { index in
-                        NavigationLink(destination: CrisisContact()){
-                        VStack{
-                        //Image(systemName: imageArr[index])
-                                //.resizable()
-                                //.frame(width: 50, height: 55)
-                        Text(bldgArr[index])
-                                .font(.subheadline)
-                        }
-                            .frame(width: 100, height: 100)
-                            //.padding()
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 5)
-                            .stroke())
-                        }
-                            .isDetailLink(false)
-                            .padding(.init(25))
-                    
-                    }
-                }
+//        ScrollView {
+//                LazyVGrid(columns: columns) {
+//                    ForEach((0...3), id: \.self) { index in
+//                        NavigationLink(destination: CrisisContact()){
+//                        VStack{
+//                        //Image(systemName: imageArr[index])
+//                                //.resizable()
+//                                //.frame(width: 50, height: 55)
+//                        Text(bldgArr[index])
+//                                .font(.subheadline)
+//                        }
+//                            .frame(width: 100, height: 100)
+//                            //.padding()
+//                            .overlay(
+//                                RoundedRectangle(cornerRadius: 5)
+//                            .stroke())
+//                        }
+//                            .isDetailLink(false)
+//                            .padding(.init(25))
+//
+//                    }
+//                }
+//        }
+        List{
+            Link("SAPR", destination: URL(string: "https://www.15wing.af.mil/UNITS/15th-Wing-SAPR/")!)
+            Link("Military Family Support Center", destination: URL(string: "https://jbphh.greatlifehawaii.com/support/military-family-support-center")!)
+            Link("Airmen Against Drunk Driving", destination: URL(string: "https://facebook.com/aaddhickam")!)
+            Link("Chaplain", destination: URL(string: "https://jbchapel.info")!)
         }
-        .navigationBarTitle("The issue", displayMode: .inline)
-        .padding(.top, 50.0)
+        .navigationBarTitle("Resources", displayMode: .inline)
+        //.padding(.top, 50.0)
     }
 }
 

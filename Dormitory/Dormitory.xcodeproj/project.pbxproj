@@ -22,6 +22,7 @@
 		679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DD285D1B0F00D18353 /* PhoneBook.swift */; };
 		679323E0285D1B4300D18353 /* MovingOnUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323DF285D1B4300D18353 /* MovingOnUp.swift */; };
 		679323E2285D1B8F00D18353 /* More.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679323E1285D1B8F00D18353 /* More.swift */; };
+		67A2EC1428C7130E0011FC24 /* DeadPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A2EC1328C7130D0011FC24 /* DeadPage.swift */; };
 		67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C850285D1F1E00833DAF /* "DataBase".swift */; };
 		67E0C854285D574A00833DAF /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C853285D574A00833DAF /* Services.swift */; };
 		67E0C856285D6D3D00833DAF /* NavyDorms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E0C855285D6D3D00833DAF /* NavyDorms.swift */; };
@@ -71,6 +72,7 @@
 		679323DD285D1B0F00D18353 /* PhoneBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBook.swift; sourceTree = "<group>"; };
 		679323DF285D1B4300D18353 /* MovingOnUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingOnUp.swift; sourceTree = "<group>"; };
 		679323E1285D1B8F00D18353 /* More.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = More.swift; sourceTree = "<group>"; };
+		67A2EC1328C7130D0011FC24 /* DeadPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadPage.swift; sourceTree = "<group>"; };
 		67E0C850285D1F1E00833DAF /* "DataBase".swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "\"DataBase\".swift"; path = "Nav/\"DataBase\".swift"; sourceTree = "<group>"; };
 		67E0C853285D574A00833DAF /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		67E0C855285D6D3D00833DAF /* NavyDorms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavyDorms.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				679323AE285D1A2600D18353 /* DormitoryApp.swift */,
 				679323B0285D1A2600D18353 /* ContentView.swift */,
 				679323D8285D1A6800D18353 /* NavBar.swift */,
+				67A2EC1328C7130D0011FC24 /* DeadPage.swift */,
 				679323DA285D1AB100D18353 /* Nav */,
 				67E0C852285D571E00833DAF /* mainxPath */,
 				674E6F202872A601007381C7 /* ContactPath */,
@@ -366,6 +369,7 @@
 				67E0C860285E568600833DAF /* IssueDesc.swift in Sources */,
 				679323DE285D1B0F00D18353 /* PhoneBook.swift in Sources */,
 				67E0C851285D1F1E00833DAF /* "DataBase".swift in Sources */,
+				67A2EC1428C7130E0011FC24 /* DeadPage.swift in Sources */,
 				67E0C85A285D7BE100833DAF /* AirForceDorms.swift in Sources */,
 				67E0C85C285DB20000833DAF /* GenMainx.swift in Sources */,
 				679323E2285D1B8F00D18353 /* More.swift in Sources */,

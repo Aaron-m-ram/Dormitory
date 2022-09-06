@@ -138,7 +138,7 @@ struct NavBar: View {
         NavigationView{
             
             VStack(spacing: 30){
-                NavigationLink(destination: Crisis()){
+                NavigationLink(destination: DeadPage()){
                     VStack{
                         Text("SHIRT/Umbudsmen")
                             .font(.title)
@@ -152,7 +152,7 @@ struct NavBar: View {
                 }
             
             
-                NavigationLink(destination: Crisis()){
+                NavigationLink(destination: DeadPage()){
                     VStack{
                         Text("Dorm Management")
                             .font(.title)
@@ -178,13 +178,14 @@ struct NavBar: View {
                             .stroke())
                 }
             }
+            .navigationTitle("Contacts")
         }.id(self.resetNavigationID)
     }
     
     private func tab3() -> some View {
         NavigationView{
             VStack(spacing: 30){
-                NavigationLink(destination: Crisis()){
+                Link(destination: URL(string: "https://www.jbpearlharborhickamhousing.com/off-base")!){
                     VStack{
                         Text("Off Base Housing")
                             .font(.title)
@@ -198,7 +199,7 @@ struct NavBar: View {
                 }
             
             
-                NavigationLink(destination: Crisis()){
+                Link(destination: URL(string: "https://www.hickamcommunities.com/mho/")!){
                     VStack{
                         Text("On Base Housing")
                             .font(.title)
@@ -211,7 +212,7 @@ struct NavBar: View {
                             .stroke())
                 }
             
-                NavigationLink(destination: Crisis()){
+                Link(destination: URL(string: "https://www.defensetravel.dod.mil/site/bahCalc.cfm")!){
                     VStack{
                         Text("BAH Calculator")
                             .font(.title)
@@ -224,6 +225,7 @@ struct NavBar: View {
                             .stroke())
                 }
             }
+            .navigationTitle("Housing")
         }.id(self.resetNavigationID)
     }
     
