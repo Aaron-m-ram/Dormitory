@@ -230,9 +230,9 @@ struct NavBar: View {
     private func tab4() -> some View {
         NavigationView{
             List {
-                Text("Facebook")
-                Text("Instagram")
-                Text("Great Life Hawaii")
+                Link("Facebook", destination: URL(string: "https://www.facebook.com/JBPHH")!)
+                Link("Instagram", destination: URL(string: "https://instagram.com/jointbasephh")!)
+                Link("Great Life Hawaii", destination: URL(string: "https://jbphh.greatlifehawaii.com")!)
                
             }
             .navigationTitle("More")
