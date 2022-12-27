@@ -97,7 +97,7 @@ struct NavBar: View {
                             .frame(width: 75, height: 75)
                         Text("Help")
                             .font(.title)
-                        Text("Locked out or need helped after hours")
+                        Text("If there is a need to reach management or maintenance")
                             .font(.subheadline)
                     }
                     
@@ -108,14 +108,14 @@ struct NavBar: View {
                 }
                 .isDetailLink(false)
                 
-                NavigationLink(destination: Emer()){
+                NavigationLink(destination: Crisis()){
                     VStack{
-                        Image(systemName: "exclamationmark.3")
+                        Image(systemName: "globe")
                             .resizable()
                             .frame(width: 75, height: 75)
-                        Text("Emergency")
+                        Text("Resources")
                             .font(.title)
-                        Text("maintenance emergence/contact management")
+                        Text("Different resources that could be utilized")
                             .font(.subheadline)
                     }
                     .frame(width: 350, height: 150)
@@ -138,47 +138,8 @@ struct NavBar: View {
         NavigationView{
             
             VStack(spacing: 30){
-                NavigationLink(destination: DeadPage()){
-                    VStack{
-                        Text("SHIRT/Umbudsmen")
-                            .font(.title)
-                        Text("If you need to contact your SHIRT/Umbudsmen")
-                            .font(.subheadline)
-                    }
-                    .frame(width: 350, height: 150)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke())
-                }
-            
-            
-                NavigationLink(destination: DeadPage()){
-                    VStack{
-                        Text("Dorm Management")
-                            .font(.title)
-                        Text("If you need help for any situation")
-                            .font(.subheadline)
-                    }
-                    .frame(width: 350, height: 150)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke())
-                }
-            
-                NavigationLink(destination: Crisis()){
-                    VStack{
-                        Text("Resources")
-                            .font(.title)
-                        Text("If you need help for any situation")
-                            .font(.subheadline)
-                    }
-                    .frame(width: 350, height: 150)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke())
-                }
             }
-            .navigationTitle("Contacts")
+            .navigationTitle("Events")
         }.id(self.resetNavigationID)
     }
     

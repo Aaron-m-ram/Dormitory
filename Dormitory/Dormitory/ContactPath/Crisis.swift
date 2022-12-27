@@ -52,6 +52,7 @@ struct Crisis: View {
             Link("Military Family Support Center", destination: URL(string: "https://jbphh.greatlifehawaii.com/support/military-family-support-center")!)
             Link("Airmen Against Drunk Driving", destination: URL(string: "https://facebook.com/aaddhickam")!)
             Link("Chaplain", destination: URL(string: "https://jbchapel.info")!)
+            Link("BDOC: (Emergency only!)", destination: URL(string: "tel:808-474=6754")!)
         }
         .navigationBarTitle("Resources", displayMode: .inline)
         //.padding(.top, 50.0)
